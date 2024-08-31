@@ -1,4 +1,15 @@
-
+*{
+    background-color: black;
+}
+h1{
+  font-size: 100px;  
+  color: white;  
+}
+.col{
+    border-radius: 10px;
+    background-color: red;
+    border-color: 10px solid white;
+}
 /* 
 
     You can write your own styles here...

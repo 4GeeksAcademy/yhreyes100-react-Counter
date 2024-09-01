@@ -17,6 +17,8 @@ const Home=(props)=>{
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
             </svg>
             </div>    
+            <div className="col-2"><b>{props.digitSix}</b></div>
+            <div className="col-2"><b>{props.digitFive}</b></div>
             <div className="col-2"><b>{props.digitFour}</b></div>
             <div className="col-2"><b>{props.digitThree}</b></div>
             <div className="col-2"><b>{props.digitTwo}</b></div>
@@ -27,6 +29,8 @@ const Home=(props)=>{
 }
 
 Home.propTypes = {
+    digitSix: PropTypes.number,
+    digitFive: PropTypes.number,
     digitFour: PropTypes.number,
     digitThree: PropTypes.number,
     digitTwo: PropTypes.number,
@@ -36,32 +40,16 @@ Home.propTypes = {
 let counter=0;
 const domNode = document.getElementById('app');
 const root = ReactDOM.createRoot(domNode);
-const num = [0,0,0,0];
+const num = [0,0,0,0,0,0];
 function RestNumber(number){
-    let res = number.toString();
-    if(res[3]!=null){
-        num[3]=parseInt(res[0])
-        num[2]=parseInt(res[1])
-        num[1]=parseInt(res[2])
-        num[0]=parseInt(res[3])
-    }
-    else if(res[2]!=null){
-        num[2]=parseInt(res[0])
-        num[1]=parseInt(res[1])
-        num[0]=parseInt(res[2])
-    }
-    else if(res[1]!=null){
-        num[1]=parseInt(res[0])
-        num[0]=parseInt(res[1])
-    }
-    else {
-        num[0]=parseInt(res[0])
-    }
+   let res =number.toString().split("").reverse();
+    for(let i =0; i<res.length;i++)
+        num[i]=parseInt(res[i]); 
 }
 setInterval(function(){
    RestNumber(counter);
     counter++;
-    root.render(<Home digitOne={num[0]} digitTwo={num[1]} digitThree={num[2]} digitFour={num[3]}  />);
+    root.render(<Home digitOne={num[0]} digitTwo={num[1]} digitThree={num[2]} digitFour={num[3]}   digitFive={num[4]} digitSix={num[5]}  />);
 },1000);
 
 //render your react application

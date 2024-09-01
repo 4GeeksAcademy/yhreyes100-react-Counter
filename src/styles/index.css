@@ -1,14 +1,27 @@
-*{
+.container{
     background-color: black;
+    margin-top: 50px;
 }
-h1{
-  font-size: 100px;  
+b{
+  font-size: 80px;  
   color: white;  
+  background-color: rgb(26, 25, 25);
+  text-align: center;
 }
-.col{
+.col-2{
     border-radius: 10px;
-    background-color: red;
     border-color: 10px solid white;
+    background-color: rgb(26, 25, 25);
+    margin-right: 10px;
+    width: 90px;
+    height: 115px;
+}
+svg{
+    color: white;
+    background-color: rgb(26, 25, 25);
+    width: 100px;
+    height: 115px;
+    margin-left: -15px;
 }
 /* 
 

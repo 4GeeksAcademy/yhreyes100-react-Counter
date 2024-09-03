@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 
 const Home=(props)=>{
     return (
-        <div>
         <div className="container d-flex justify-content-center">
             <div className="row">
             <div className="col-2 img">
@@ -21,7 +20,6 @@ const Home=(props)=>{
             <div className="col-2"><b>{props.digitTwo}</b></div>
             <div className="col-2"><b>{props.digitOne}</b></div>
             </div>
-        </div>
         </div>
     );
 }

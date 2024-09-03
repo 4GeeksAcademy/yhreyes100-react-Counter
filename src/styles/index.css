@@ -26,8 +26,10 @@ svg{
 .img{
     margin-left: -50px;
 }
-input{
-    font-size: large;
+.btn{
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
 }
 /* 
 
